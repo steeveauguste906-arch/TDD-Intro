@@ -13,6 +13,7 @@
  */
 export function sumDouble(num1, num2) {
   /* TODO */
+return num1 + num2;
 }
 
 /**
@@ -29,6 +30,7 @@ export function sumDouble(num1, num2) {
  */
 export function makes10(num1, num2) {
   /* TODO */
+  return num1 === 10 || num2 === 10 || num1 + num2 === 10;
 }
 
 /**
@@ -47,6 +49,7 @@ export function makes10(num1, num2) {
  */
 export function near100(n, distance) {
   /* TODO */
+  return Math.abs(n - 100) <= distance;
 }
 
 /**
@@ -64,6 +67,7 @@ export function near100(n, distance) {
  */
 export function isMultiple35(n) {
   /* TODO */
+  return n % 3 === 0 || n % 5 === 0;
 }
 
 /**
@@ -82,6 +86,7 @@ export function isMultiple35(n) {
  */
 export function shareLastDigit(num1, num2) {
   /* TODO */
+  return num1 % 10 === num2 % 10; 
 }
 
 /**
@@ -99,6 +104,8 @@ export function shareLastDigit(num1, num2) {
  */
 export function isColdAndHot(temp1, temp2) {
   /* TODO */
+  return (temp1 < 0 && temp2 > 100) ||
+         (temp2 < 0 && temp1 > 100);
 }
 
 /**
@@ -115,6 +122,7 @@ export function isColdAndHot(temp1, temp2) {
  */
 export function makeABBA(A, B) {
   /* TODO */
+  return A + B + B + A;
 }
 
 /**
@@ -136,6 +144,11 @@ export function makeABBA(A, B) {
  */
 export function makeSLS(str1, str2) {
   /* TODO */
+  if ( str1.length < str2.length) {
+    return str1 + str2 + str1;
+  } else {
+    return str2 + str1 + str2;
+  }
 }
 
 /**
@@ -157,6 +170,14 @@ export function makeSLS(str1, str2) {
  */
 export function canEnterClub(you, date) {
   /* TODO */
+  if (you <= 2 || date <= 2) {
+    return 0;
+  }
+
+  if (you >= 8 || date >= 8) {
+    return 2;
+  }
+  return 1;
 }
 
 /**
@@ -178,4 +199,12 @@ export function canEnterClub(you, date) {
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
   /* TODO */
+  if (isAsleep) {
+    return false;
+  }
+
+  if (isMorning && !isBoss) {
+    return false;
+  }
+  return true;
 }
